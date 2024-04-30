@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="wrapper wrapper-content animated fadeIn">
- 
-    <div><h3>Ajouter Eleve</h3></div>
+
 
     <div class="row">
         <div class="col-lg-12">
@@ -31,64 +31,62 @@
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <form class="form-horizontal" action="{{ Route('enregistrerEleve') }}"  method="post" enctype="multipart/form-data">
+                                    <form class="form-horizontal" action="/updatestoreeleve" method="post" enctype="multipart/form-data">
                                         @csrf
-                                       
+                                        <input type="text" name="id" style="display: none;" value="{{ $eleve->id }}">
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Nom</label>
                                             <div class="col-lg-4">
-                                                <input name="Nom" class="form-control">
+                                                <input name="Nom" class="form-control" value="{{ $eleve->Nom }}" required>
                                             </div>
                                             <label class="col-lg-2 control-label">Prénom</label>
                                             <div class="col-lg-4">
-                                                <input name="Prénom" class="form-control" required>
+                                                <input name="Prénom" class="form-control" value="{{ $eleve->Prénom }}" required>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Matricule</label>
                                             <div class="col-lg-4">
-                                                <input name="Matricule" class="form-control" required>
+                                                <input name="Matricule" class="form-control" value="{{ $eleve->Matricule }}" required>
                                             </div>
                                             <label class="col-lg-2 control-label">Adresse</label>
                                             <div class="col-lg-4">
-                                                <input name="Adresse" class="form-control" required>
+                                                <input name="Adresse" class="form-control" value="{{ $eleve->Adresse }}" required>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label class="col-lg-2 control-label" >Email</label>
+                                            <label class="col-lg-2 control-label">Email</label>
                                             <div class="col-lg-4">
-                                                <input name="Email" class="form-control" required>
+                                                <input name="Email" class="form-control" value="{{ $eleve->Email }}" required>
                                             </div>
                                             <label class="col-lg-2 control-label">Tel élève</label>
                                             <div class="col-lg-4">
-                                                <input name="TelEleve" class="form-control">
+                                                <input name="TelEleve" class="form-control" value="{{ $eleve->TelEleve }}" required>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Date de naissance</label>
                                             <div class="col-lg-4">
-                                                <input type="date" name="DateNaissance" class="form-control" required>
+                                                <input type="date" name="DateNaissance" class="form-control" value="{{ $eleve->DateNaissance }}" required>
                                             </div>
                                             <label class="col-lg-2 control-label">Lieu de naissance</label>
                                             <div class="col-lg-4">
-                                                <input name="LieuNaissance" class="form-control">
+                                                <input name="LieuNaissance" class="form-control" value="{{ $eleve->LieuNaissance }}" required>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Nationalité</label>
                                             <div class="col-lg-4">
-                                                <input name="Nationalite" class="form-control" required>
+                                                <input name="Nationalite" class="form-control" value="{{ $eleve->Nationalite }}" required>
                                             </div>
-                                            
                                             <label class="col-lg-2 control-label">Pays</label>
                                             <div class="col-lg-4">
-                                                <input name="Pays" class="form-control" required>
+                                                <input name="Pays" class="form-control" value="{{ $eleve->Pays }}" required>
                                             </div>
-                                            
                                         </div>
                                         
                                         <div class="form-group">
@@ -124,24 +122,24 @@
                                         <div class="form-horizontal" >
                                         
                                           
-                                            <div class="form-group"><label class="col-lg-2 control-label">Nom complet Pere</label>
-                                                <div class="col-lg-10"><input  name="NomPere" class="form-control" required> </div>
+                                            <div class="form-group"><label class="col-lg-2 control-label">Nomcomplet Pere</label>
+                                                <div class="col-lg-10"><input  name="NomPere" value="{{ $eleve->NomPere }}" class="form-control"> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Tel père</label>
-                                                <div class="col-lg-10"><input  name="TelPere" class="form-control" required> </div>
+                                                <div class="col-lg-10"><input  name="TelPere" value="{{ $eleve->TelPere }}"  class="form-control"> </div>
                                             </div> <br>
-                                            <div class="form-group"><label class="col-lg-2 control-label">Nom complet Mère</label>
-                                                <div class="col-lg-10"><input  name="NomMere" class="form-control" required> </div>
+                                            <div class="form-group"><label class="col-lg-2 control-label">Nomcomplet Mère</label>
+                                                <div class="col-lg-10"><input  name="NomMere" value="{{ $eleve->NomMere }}" class="form-control"> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Tel Mère</label>
-                                                <div class="col-lg-10"><input  name="TelMere" class="form-control" required> </div>
+                                                <div class="col-lg-10"><input  name="TelMere" value="{{ $eleve->TelMere }}"  class="form-control"> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Saisipar</label>
-                                                <div class="col-lg-10"><input  name="saisipar" class="form-control" required> </div>
+                                                <div class="col-lg-10"><input  name="saisipar" value="{{ $eleve->saisipar }}" class="form-control"> </div>
                                             </div> <br>
                                             <div class="form-group">
                                                 <div class="col-lg-offset-2 col-lg-10">
-                                                    <button class="btn btn-sm btn-primary btn-orange" type="submit">Enregistrer</button>
+                                                    <button class="btn btn-sm btn-primary btn-orange" type="submit">Modifier</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -172,5 +170,6 @@
         document.querySelector('[href="#tab-2"]').click();
     });
 </script>
+
 
 @endsection

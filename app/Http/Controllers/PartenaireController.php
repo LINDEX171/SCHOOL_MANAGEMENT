@@ -91,5 +91,12 @@ public function updatepartenaire($IDPartenaire)
     return redirect('/liste-partenaire')->with('success', 'partenaire modifié avec succès');
 }
 
+public function deletepartenaire($IDPartenaire)
+{
+    $partenaire = Partenaire::find($IDPartenaire);
+    $partenaire->delete();
+    return redirect('/liste-partenaire')->with('success', 'Partenaire supprimé avec succès');
+}
+
 
 }

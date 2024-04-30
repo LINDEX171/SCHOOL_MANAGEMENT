@@ -24,10 +24,10 @@
             <li>
                 <a href="{{ url('dashboard')}}"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
             </li>
-            <li class="active">
+            <li>
                 <a href="#"><i class="fa fa-building"></i> <span class="nav-label">Administration</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    <li class="active"><a href="{{ url('liste-eleve')}}">Elèves</a></li>
+                    <li><a href="{{ url('liste-eleve')}}">Elèves</a></li>
                     <li><a href="{{ url('liste-partenaire')}}">Partenaires</a></li>
                     <li><a href="{{ url('admin/admin/groupe')}}">Groupes de rentré</a></li>
                     <li><a href="{{ url('admin/admin/departement')}}">Departements</a></li>
@@ -37,7 +37,7 @@
                 </ul>
             </li>
 
-            <li class="active">
+            <li >
                 <a href=""><i class="fa fa-calendar"></i> <span class="nav-label">Emploi du Temps</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li class="active"><a href="{{ url('admin/emploidutemps/heure')}}">Reservation heure</a></li>
@@ -46,7 +46,7 @@
                 </ul>
             </li>  
 
-            <li class="active">
+            <li>
                 <a href=""><i class="fa fa fa-book"></i> <span class="nav-label">Notes</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li class="active"><a href="{{ url('admin/note/note')}}">Reservation heure</a></li>
@@ -132,7 +132,7 @@
 </div>
     <ul class="nav navbar-top-links navbar-right">
         <li>
-            <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+            <span class="m-r-sm text-muted welcome-message">Welcome to School %anagement Admin.</span>
         </li>
         <li class="dropdown">
             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">

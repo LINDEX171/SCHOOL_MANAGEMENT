@@ -10,7 +10,6 @@ class NiveauController extends Controller
     public function index()
     { 
       return view("admin.niveaux.niveau");
-    
     }
 
     public function liste()
@@ -46,6 +45,11 @@ public function updatestoreniveau(Request $request)
     return redirect('/liste-niveau')->with('success', 'Niveau modifié avec succès');
 }
 
-
+public function deleteniveau($id)
+{
+    $niveau = Niveau::find($id);
+    $niveau->delete();
+    return redirect('/liste-niveau')->with('success', 'Niveau supprimé avec succès');
+}
 
 }

@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/eleve',[EleveController::class,'index'])->name('eleve');
 Route::get('/liste-eleve',[EleveController::class,'liste'])->name('liste');
 Route::post('/storeeleves',[EleveController::class,'store'])->name('enregistrerEleve');
+Route::get('/update-eleve/{id}',[EleveController::class,'updateeleve']);
+Route::post('/updatestoreeleve',[EleveController::class,'updatestoreeleve']);
+Route::get('/delete-eleve/{id}',[EleveController::class,'deleteeleve']);
 
 
 Route::get('/partenaire',[PartenaireController::class,'index'])->name('partenaire');
@@ -26,6 +29,7 @@ Route::get('/liste-partenaire',[PartenaireController::class,'liste'])->name('lis
 Route::post('/storepartenaires',[PartenaireController::class,'store'])->name('enregistrerPartenaire');
 Route::get('/update-partenaire/{IDPartenaire}',[PartenaireController::class,'updatepartenaire']);
 Route::post('/updatestorepartenaire',[PartenaireController::class,'updatestorepartenaire']);
+Route::get('/delete-partenaire/{id}',[PartenaireController::class,'deletepartenaire']);
 
 
 Route::get('/niveau',[NiveauController::class,'index'])->name('niveau');
@@ -33,6 +37,7 @@ Route::get('/liste-niveau',[NiveauController::class,'liste'])->name('liste2');
 Route::post('/storeniveaux',[NiveauController::class,'store'])->name('enregistrerNiveau');
 Route::get('/update-niveau/{id}',[NiveauController::class,'updateniveau']);
 Route::post('/updatestoreniveau',[NiveauController::class,'updatestoreniveau']);
+Route::get('/delete-niveau/{id}',[NiveauController::class,'deleteniveu']);
 
 Route::get('/personnel',[PersonnelController::class,'index'])->name('personnel');
 Route::get('/liste-personnel',[PersonnelController::class,'liste'])->name('liste3');

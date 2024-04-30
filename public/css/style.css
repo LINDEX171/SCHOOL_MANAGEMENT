@@ -4015,7 +4015,7 @@ table.table-mail tr td {
 .ibox-tools .dropdown-menu > li > a {
   padding: 4px 10px;
   font-size: 12px;
-}
+}welcome-message
 .ibox .ibox-tools.open > .dropdown-menu {
   left: auto;
   right: 0;
@@ -4023,7 +4023,7 @@ table.table-mail tr td {
 /* BACKGROUNDS */
 .gray-bg,
 .bg-muted {
-  background-color: #f3f3f4;
+  background-color: #ffffff;
 }
 .white-bg {
   background-color: #ffffff;

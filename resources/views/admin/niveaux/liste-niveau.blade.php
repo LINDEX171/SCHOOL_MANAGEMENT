@@ -5,6 +5,11 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
+                    @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
                     <h5>Liste Niveau</h5>
                     <div class="ibox-tools">
                         <a href="{{ route("niveau")}}" class="btn btn-primary  btn-orange">Ajouter Partenaire</a>
@@ -18,9 +23,9 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Niveau</th>
-                                    <th>Cycle</th>
-                                    <th>Action</th>
+                                    <th class="col-lg-2">Niveau</th>
+                                    <th class="col-lg-2">Cycle</th>
+                                    <th class="col-lg-2">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,7 +34,11 @@
                                     <td>{{ $n->Niveau }}</td>
                                     <td>{{ $n->Cycle }}</td>
                                     <td>
-                                        <a href="/update-niveau/{{ $n->id }}" class="btn btn-info btn-sm">Modifier</a>
+                                        <a href="/update-partenaire/{{ $n->id }}" class="btn btn-info btn-sm btn-orange">
+                                            <i class="fa fa-pencil"></i> 
+                                        </a>
+                                        <a href="/delete-partenaire/{{ $n->id }}" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> 
                                     </td>
                                 </tr>
                                 @endforeach
