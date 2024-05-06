@@ -10,9 +10,9 @@
                         <p>{{ $message }}</p>
                     </div>
                 @endif
-                    <h5>Liste Niveau</h5>
+                    <h5>Liste Classe</h5>
                     <div class="ibox-tools">
-                        <a href="{{ route("niveau")}}" class="btn btn-primary  btn-orange">Ajouter Partenaire</a>
+                        <a href="{{ route("classe")}}" class="btn btn-primary  btn-orange">Ajouter Classe</a>
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
                         </a>
@@ -23,21 +23,26 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th class="col-lg-2">Niveau</th>
-                                    <th class="col-lg-2">Cycle</th>
-                                    <th class="col-lg-2">Action</th>
+                                    <th class="col-lg-1">Classe</th>
+                                    <th class="col-lg-1">libelle</th>
+                                    <th class="col-lg-1">Niveau</th>
+                                    <th class="col-lg-1">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($niveau as $n)
+                                @foreach ($classe as $c)
                                 <tr>
-                                    <td>{{ $n->Niveau }}</td>
-                                    <td>{{ $n->Cycle }}</td>
-                                    <td>
-                                        <a href="/update-niveau/{{ $n->id }}" class="btn btn-info btn-sm btn-orange">
+                                    <td>{{ $c->Classe }}</td>
+                                    <td>{{ $c->Libelle }}</td>
+                                    <td>{{ $c->Niveau }}</td>
+                                   
+    
+                                    <td >
+                                        <a href="/update-classe/{{ $c->id }}" class="btn btn-info btn-sm btn-orange">
                                             <i class="fa fa-pencil"></i> 
                                         </a>
-                                        <a href="/delete-niveau/{{ $n->id }}" class="btn btn-danger btn-sm">
+                                        
+                                        <a href="/delete-classe/{{ $c->id }}" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i> 
                                     </td>
                                 </tr>

@@ -3,7 +3,7 @@
 <div class="col-lg-12">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>Ajouter Niveau</h5>
+            <h5>Ajouter Classe</h5>
             <div class="ibox-tools">
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#">Config option 1</a>
@@ -17,13 +17,16 @@
             </div>
         </div>
         <div class="ibox-content">
-            <form class="form-horizontal" action="{{ Route('enregistrerNiveau') }}"  method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ Route('enregistrerClasse') }}"  method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group"><label class="col-lg-2 control-label">Niveau</label>
-                    <div class="col-lg-10"><input  name="Niveau" class="form-control" required> </div>
+                <div class="form-group"><label class="col-lg-2 control-label">Classe</label>
+                    <div class="col-lg-10"><input  name="Classe" class="form-control" required> </div>
                 </div> <br>
-                <div class="form-group"><label class="col-lg-2 control-label">Cycle</label>
-                    <div class="col-lg-10"><input  name="Cycle" class="form-control" required> </div>
+                <div class="form-group"><label class="col-lg-2 control-label">Libelle</label>
+                    <div class="col-lg-10"><input  name="Libelle" class="form-control" required> </div>
+                </div> <br>
+                <div class="form-group"><label class="col-lg-2 control-label">Niveau</label>
+                    <div class="col-lg-10"><input  name="Niveau" class="form-control" required > </div>
                 </div> <br>
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">

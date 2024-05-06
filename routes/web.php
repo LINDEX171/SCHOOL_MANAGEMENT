@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\EleveController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\PartenaireController;
 use App\Http\Controllers\PersonnelController;
@@ -37,7 +40,29 @@ Route::get('/liste-niveau',[NiveauController::class,'liste'])->name('liste2');
 Route::post('/storeniveaux',[NiveauController::class,'store'])->name('enregistrerNiveau');
 Route::get('/update-niveau/{id}',[NiveauController::class,'updateniveau']);
 Route::post('/updatestoreniveau',[NiveauController::class,'updatestoreniveau']);
-Route::get('/delete-niveau/{id}',[NiveauController::class,'deleteniveu']);
+Route::get('/delete-niveau/{id}',[NiveauController::class,'deleteniveau']);
+
+Route::get('/departement',[DepartementController::class,'index'])->name('departement');
+Route::get('/liste-departement',[DepartementController::class,'liste'])->name('liste4');
+Route::post('/storedepartements',[DepartementController::class,'store'])->name('enregistrerDepartement');
+Route::get('/update-departement/{id}',[DepartementController::class,'updatedepartement']);
+Route::post('/updatestoredepartement',[DepartementController::class,'updatestoredepartement']);
+Route::get('/delete-departement/{id}',[DepartementController::class,'deletedepartement']);
+
+
+Route::get('/classe',[ClasseController::class,'index'])->name('classe');
+Route::get('/liste-classe',[ClasseController::class,'liste'])->name('liste5');
+Route::post('/storeclasses',[ClasseController::class,'store'])->name('enregistrerClasse');
+Route::get('/update-classe/{id}',[ClasseController::class,'updateclasse']);
+Route::post('/updatestoreclasse',[ClasseController::class,'updatestoreclasse']);
+Route::get('/delete-classe/{id}',[ClasseController::class,'deleteclasse']);
+
+Route::get('/inscription',[InscriptionController::class,'index'])->name('inscription');
+Route::get('/liste-inscription',[InscriptionController::class,'liste'])->name('liste6');
+Route::post('/storeinscription',[InscriptionController::class,'store'])->name('enregistrerInscription');
+Route::get('/update-inscription/{id}',[InscriptionController::class,'updateinscription']);
+Route::post('/updatestoreinscription',[InscriptionController::class,'updatestoreinscription']);
+Route::get('/delete-inscription/{id}',[InscriptionController::class,'deleteinscription']);
 
 Route::get('/personnel',[PersonnelController::class,'index'])->name('personnel');
 Route::get('/liste-personnel',[PersonnelController::class,'liste'])->name('liste3');
@@ -48,15 +73,8 @@ Route::get('/liste-personnel',[PersonnelController::class,'liste'])->name('liste
 Route::get('admin/admin/groupe', function () {
     return view('admin.admin.groupe');
 });
-Route::get('admin/admin/departement', function () {
-    return view('admin.admin.departement');
-});
-Route::get('admin/admin/niveau', function () {
-    return view('admin.admin.niveau');
-});
-Route::get('admin/admin/inscription', function () {
-    return view('admin.admin.inscription');
-});
+
+
 Route::get('admin/emploidutemps/heure', function () {
     return view('admin.emploidutemps.heure');
 });
