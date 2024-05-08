@@ -37,7 +37,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Nom</label>
                                             <div class="col-lg-4">
-                                                <input name="Nom" class="form-control">
+                                                <input name="Nom" class="form-control" required>
                                             </div>
                                             <label class="col-lg-2 control-label">Prénom</label>
                                             <div class="col-lg-4">
@@ -63,7 +63,7 @@
                                             </div>
                                             <label class="col-lg-2 control-label">Tel élève</label>
                                             <div class="col-lg-4">
-                                                <input name="TelEleve" class="form-control">
+                                                <input name="TelEleve" class="form-control" required>
                                             </div>
                                         </div>
                                         
@@ -74,7 +74,7 @@
                                             </div>
                                             <label class="col-lg-2 control-label">Lieu de naissance</label>
                                             <div class="col-lg-4">
-                                                <input name="LieuNaissance" class="form-control">
+                                                <input name="LieuNaissance" class="form-control" required>
                                             </div>
                                         </div>
                                         

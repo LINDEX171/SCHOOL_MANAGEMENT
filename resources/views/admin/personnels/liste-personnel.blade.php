@@ -10,9 +10,9 @@
                         <p>{{ $message }}</p>
                     </div>
                 @endif
-                    <h5>Liste Partenaire</h5>
+                    <h5>Liste Personnel</h5>
                     <div class="ibox-tools">
-                        <a href="#" class="btn btn-primary btn-orange" data-toggle="modal" data-target="#modal-form">Ajouter Partenaire</a>
+                        <a href="#" class="btn btn-primary btn-orange" data-toggle="modal" data-target="#modal-form">Ajouter Personnel</a>
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
                         </a>
@@ -23,27 +23,33 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th class="col-lg-2">ID Partenaire</th>
-                                    <th class="col-lg-2">Denomination</th>
-                                    <th class="col-lg-2">Email</th>
-                                    <th class="col-lg-2">Téléphone</th>
-                                    <th class="col-lg-2">Action</th>
+                                    <th class="col-lg-1">Civilité</th>
+                                    <th class="col-lg-1">Nomm</th>
+                                    <th class="col-lg-1">Prénom</th>
+                                    <th class="col-lg-1">Téléphone</th>
+                                    <th class="col-lg-1">Email</th>
+                                    <th class="col-lg-1">Saisipar</th>
+                                    <th class="col-lg-1">Matricule</th>
+                                    <th class="col-lg-1">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($partenaire as $p)
+                                @foreach ($personnel as $p)
                                 <tr>
-                                    <td>{{ $p->IDPartenaire }}</td>
-                                    <td>{{ $p->Denomination }}</td>
+                                    <td>{{ $p->Civilite }}</td>
+                                    <td>{{ $p->Nom }}</td>
+                                    <td>{{ $p->Prenom }}</td>
+                                    <td>{{ $p->Telephone }}</td>
                                     <td>{{ $p->Email }}</td>
-                                    <td>{{ $p->Tel }}</td>
-                                    <td>
-                                         <a href="/update-partenaire/{{ $p->IDPartenaire }}" class="btn btn-info btn-sm btn-orange">
-                                        <i class="fa fa-pencil"></i> 
-                                    </a>
-                                    <a href="/delete-partenaire/{{ $p->IDPartenaire }}" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i> 
-                                    </a>
+                                    <td>{{ $p->Saisipar }}</td>
+                                    <td>{{ $p->Matricule }}</td>
+                                    <td >
+                                        <a href="/update-personnel/{{ $p->id }}" class="btn btn-info btn-sm btn-orange">
+                                            <i class="fa fa-pencil"></i> 
+                                        </a>
+                                        
+                                        <a href="/delete-personnel/{{ $p->id }}" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> 
                                     </td>
                                 </tr>
                                 @endforeach
@@ -57,17 +63,6 @@
 </div>
 
 <!-- Modal popup -->
-<div id="modal-form" class="modal fade" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Ajouter Partenaire</h4>
-            </div>
-            <div class="modal-body">
-              <!-- Modal popup -->
 <div id="modal-form" class="modal fade" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -107,11 +102,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
-</div>
-
             </div>
         </div>
     </div>

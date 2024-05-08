@@ -29,11 +29,11 @@
                 <ul class="nav nav-second-level">
                     <li><a href="{{ url('liste-eleve')}}">Elèves</a></li>
                     <li><a href="{{ url('liste-partenaire')}}">Partenaires</a></li>
-                    <li><a href="{{ url('admin/admin/groupe')}}">Groupes de rentré</a></li>
                     <li><a href="{{ url('liste-departement')}}">Departements</a></li>
                     <li><a href="{{ url('liste-niveau')}}">Niveaux</a></li>
                     <li><a href="{{ url('liste-classe')}}">Classe</a></li>
-                    <li><a href="{{ url('liste-inscription')}}">inscription</a></li>
+                    <li><a href="{{ url('liste-inscription')}}">Inscription</a></li>
+                    <li><a href="{{ url('liste-personnel')}}">Personnel</a></li>
                 </ul>
             </li>
 

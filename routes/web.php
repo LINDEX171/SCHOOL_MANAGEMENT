@@ -65,10 +65,11 @@ Route::post('/updatestoreinscription',[InscriptionController::class,'updatestore
 Route::get('/delete-inscription/{id}',[InscriptionController::class,'deleteinscription']);
 
 Route::get('/personnel',[PersonnelController::class,'index'])->name('personnel');
-Route::get('/liste-personnel',[PersonnelController::class,'liste'])->name('liste3');
-//Route::post('/storepersonnels',[PersonnelController::class,'store'])->name('enregistrerPersonnel');
-//Route::get('/update-personnel/{id}',[PersonnelController::class,'updatepersonnel']);
-//Route::post('/updatestorepersonnel',[PersonnelController::class,'updatestorepersonnel']);
+Route::get('/liste-personnel',[PersonnelController::class,'liste'])->name('liste7');
+Route::post('/storepersonnels',[PersonnelController::class,'store'])->name('enregistrerPersonnel');
+Route::get('/update-personnel/{id}',[PersonnelController::class,'updatepersonnel']);
+Route::post('/updatestorepersonnel',[PersonnelController::class,'updatestorepersonnel']);
+Route::get('/delete-personnel/{id}',[PersonnelController::class,'deletepersonnel']);
 
 Route::get('admin/admin/groupe', function () {
     return view('admin.admin.groupe');

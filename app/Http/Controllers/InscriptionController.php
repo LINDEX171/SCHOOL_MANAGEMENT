@@ -18,8 +18,10 @@ class InscriptionController extends Controller
 
     public function liste()
     {
+        $eleves = Eleve::all();
+        $classes = Classe::all();
         $inscription = Inscription::all();
-      return view("admin.inscriptions.liste-inscription", compact('inscription'));
+      return view("admin.inscriptions.liste-inscription", compact('inscription','eleves','classes'));
     }
 
     public function store(Request $request)

@@ -123,19 +123,19 @@
                                         
                                           
                                             <div class="form-group"><label class="col-lg-2 control-label">Nomcomplet Pere</label>
-                                                <div class="col-lg-10"><input  name="NomPere" value="{{ $eleve->NomPere }}" class="form-control"> </div>
+                                                <div class="col-lg-10"><input  name="NomPere" value="{{ $eleve->NomPere }}" class="form-control" required> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Tel père</label>
-                                                <div class="col-lg-10"><input  name="TelPere" value="{{ $eleve->TelPere }}"  class="form-control"> </div>
+                                                <div class="col-lg-10"><input  name="TelPere" value="{{ $eleve->TelPere }}"  class="form-control" required> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Nomcomplet Mère</label>
-                                                <div class="col-lg-10"><input  name="NomMere" value="{{ $eleve->NomMere }}" class="form-control"> </div>
+                                                <div class="col-lg-10"><input  name="NomMere" value="{{ $eleve->NomMere }}" class="form-control" required> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Tel Mère</label>
-                                                <div class="col-lg-10"><input  name="TelMere" value="{{ $eleve->TelMere }}"  class="form-control"> </div>
+                                                <div class="col-lg-10"><input  name="TelMere" value="{{ $eleve->TelMere }}"  class="form-control" required> </div>
                                             </div> <br>
                                             <div class="form-group"><label class="col-lg-2 control-label">Saisipar</label>
-                                                <div class="col-lg-10"><input  name="saisipar" value="{{ $eleve->saisipar }}" class="form-control"> </div>
+                                                <div class="col-lg-10"><input  name="saisipar" value="{{ $eleve->saisipar }}" class="form-control" required> </div>
                                             </div> <br>
                                             <div class="form-group">
                                                 <div class="col-lg-offset-2 col-lg-10">
