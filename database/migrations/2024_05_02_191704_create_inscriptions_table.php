@@ -17,17 +17,17 @@ return new class extends Migration
             $table->foreign('classe_id')->references('id')->on('classes')->onDelete('set null');
             $table->unsignedBigInteger('eleve_id')->nullable();
             $table->foreign('eleve_id')->references('id')->on('eleves')->onDelete('set null');
-            $table->string("Annee");
-            $table->String("Montant");
-            $table->String("MontantPaye");
-            $table->String("Valide");
-            $table->String("Paye");
-            $table->String("Inscrit");
+            $table->string("Annee", 10);
+            $table->string("Montant", 50);
+            $table->string("MontantPaye", 50);
+            $table->string("Valide", 10);
+            $table->string("Paye", 10);
+            $table->string("Inscrit", 10);
             $table->date("DateInscription");
             $table->time("HeureInscription");
-            $table->String("NoInscription");
-            $table->String("Subvention");
-            $table->String("Reliquat");
+            $table->string("NoInscription", 50);
+            $table->string("Subvention", 50);
+            $table->string("Reliquat", 50);
             $table->timestamps();
         });
     }

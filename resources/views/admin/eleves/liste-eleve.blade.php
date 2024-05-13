@@ -49,8 +49,24 @@
                                        
                                 </tr>
                                 @endforeach
+
+                                
                             </tbody>
                         </table>
+                       <!-- Pagination -->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <ul class="pagination">
+                                @for ($i = 1; $i <= $eleve->lastPage(); $i++)
+                                    <li class="{{ ($eleve->currentPage() == $i) ? 'active' : '' }}">
+                                        <a href="{{ $eleve->url($i) }}">{{ $i }}</a>
+                                    </li>
+                                @endfor
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Pagination -->
+
                     </div>
                 </div>
             </div>

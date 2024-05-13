@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
-            $table->String("Classe");
-            $table->String("Libelle");
-            $table->String("Niveau");
+            $table->string("Classe", 50); 
+            $table->string("Libelle", 255); 
+            $table->string("Niveau", 50); 
             $table->timestamps();
         });
     }

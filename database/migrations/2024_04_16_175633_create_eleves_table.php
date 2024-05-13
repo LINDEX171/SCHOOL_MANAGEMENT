@@ -13,21 +13,21 @@ return new class extends Migration
     {
         Schema::create('eleves', function (Blueprint $table) {
             $table->id();
-            $table->String("Matricule");
-            $table->String("Prénom");
-            $table->String("Nom");
-            $table->String("Adresse");
-            $table->String("Email");
+            $table->string("Matricule", 20);
+            $table->string("Prénom", 100);
+            $table->string("Nom", 100);
+            $table->string("Adresse", 255);
+            $table->string("Email", 255);
             $table->date("DateNaissance");
-            $table->String("LieuNaissance");
-            $table->String("Pays");
-            $table->String("Nationalite"); 
-            $table->String("TelEleve");
-            $table->String("NomPere");
-            $table->String("TelPere");
-            $table->String("NomMere");
-            $table->String("TelMere");
-            $table->String("saisipar");
+            $table->string("LieuNaissance", 100);
+            $table->string("Pays", 100);
+            $table->string("Nationalite", 100);
+            $table->string("TelEleve", 20);
+            $table->string("NomPere", 100);
+            $table->string("TelPere", 20);
+            $table->string("NomMere", 100);
+            $table->string("TelMere", 20);
+            $table->string("saisipar", 100);
             $table->timestamps();
         });
     }

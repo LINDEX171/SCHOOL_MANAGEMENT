@@ -15,7 +15,7 @@ class EleveController extends Controller
 
     public function liste()
     {
-        $eleve = Eleve::all();
+      $eleve = Eleve::orderBy('Prénom')->paginate(10); 
       return view("admin.eleves.liste-eleve", compact('eleve'));
     }
 

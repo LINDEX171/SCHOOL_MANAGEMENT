@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('niveaux', function (Blueprint $table) {
             $table->id();
-            $table->String("Niveau");
-            $table->String("Cycle");
+            $table->string("Niveau", 50); 
+            $table->string("Cycle", 50); 
             $table->timestamps();
         });
     }

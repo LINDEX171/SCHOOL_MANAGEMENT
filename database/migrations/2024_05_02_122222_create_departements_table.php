@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('departements', function (Blueprint $table) {
             $table->id();
-            $table->String("NomDepartement");
-            $table->String("Description");
+            $table->string("NomDepartement", 100);
+            $table->string("Description", 255);
             $table->date("DateCreation");
-            $table->String("Responsable");
-            $table->String("NombreEmployes");
-            $table->String("NombreEtudiants");
-            $table->String("Equipements");
-            $table->String("Contacts");
+            $table->string("Responsable", 100);
+            $table->string("NombreEmployes", 50);
+            $table->string("NombreEtudiants", 50);
+            $table->string("Equipements", 255);
+            $table->string("Contacts", 255);
             $table->timestamps();
         });
     }

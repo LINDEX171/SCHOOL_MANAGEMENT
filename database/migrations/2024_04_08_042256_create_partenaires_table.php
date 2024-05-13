@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('partenaires', function (Blueprint $table) {
             $table->bigIncrements('IDPartenaire');
-            $table->String("Denomination");
-            $table->String("Adresse");
-            $table->String("Email");
-            $table->String("Tel");
-            $table->string("Pays");
-            $table->String("numero_compte");
+            $table->string("Denomination", 255); 
+            $table->string("Adresse", 255); 
+            $table->string("Email", 255); 
+            $table->string("Tel", 20);
+            $table->string("Pays", 100); 
+            $table->string("numero_compte", 50);
             $table->integer("montant_du");
             $table->integer("montant_paye");
             $table->integer("montant_initial");

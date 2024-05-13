@@ -56,17 +56,7 @@
     </div>
 </div>
 
-<!-- Modal popup -->
-<div id="modal-form" class="modal fade" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Ajouter Partenaire</h4>
-            </div>
-            <div class="modal-body">
+
               <!-- Modal popup -->
 <div id="modal-form" class="modal fade" aria-hidden="true">
     <div class="modal-dialog">
@@ -78,35 +68,61 @@
                 <h4 class="modal-title">Ajouter Niveau</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="{{ Route('enregistrerPersonnel') }}"  method="post" enctype="multipart/form-data">
+                <form class="form-horizontal" action="{{ Route('enregistrerPartenaire') }}"  method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group"><label class="col-lg-2 control-label">Civilité</label>
-                        <div class="col-lg-10"><input  name="Civilite" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Nom</label>
-                        <div class="col-lg-10"><input  name="Nom" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Prénom</label>
-                        <div class="col-lg-10"><input  name="Prenom" class="form-control" required > </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Téléphone</label>
-                        <div class="col-lg-10"><input  name="Telephone" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Email</label>
-                        <div class="col-lg-10"><input  name="Email" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Saisi par</label>
-                        <div class="col-lg-10"><input  name="Saisipar" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group"><label class="col-lg-2 control-label">Matricule</label>
-                        <div class="col-lg-10"><input  name="Matricule" class="form-control" required> </div>
-                    </div> <br>
-                    <div class="form-group">
-                        <div class="col-lg-offset-2 col-lg-10">
-                            <button class="btn btn-sm btn-primary btn-orange" type="submit">Enregistrer</button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Denomination</label>
+                                <div class="col-lg-8"><input name="Denomination" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Adresse</label>
+                                <div class="col-lg-8"><input name="Adresse" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Email</label>
+                                <div class="col-lg-8"><input type="email" name="Email" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Téléphone</label>
+                                <div class="col-lg-8"><input name="Tel" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Pays</label>
+                                <div class="col-lg-8"><input name="Pays" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Numero compte</label>
+                                <div class="col-lg-8"><input name="numero_compte" class="form-control"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Montant</label>
+                                <div class="col-lg-8"><input name="montant_du" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Montant Paye</label>
+                                <div class="col-lg-8"><input name="montant_paye" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Montant Initial</label>
+                                <div class="col-lg-8"><input name="montant_initial" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Logo</label>
+                                <div class="col-lg-8"><input type="file" name="logo" class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-4 col-lg-8">
+                                    <button class="btn btn-sm btn-primary btn-orange" type="submit">Enregistrer</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>
